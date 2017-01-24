@@ -1,0 +1,8 @@
+# git branch in PS1
+if [ -f ~/.bash_git ]; then
+        source ~/.bash_git
+else
+        #curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.bash_git
+	curl -L https://raw.githubusercontent.com/atlantis3001/bash_config/master/git-prompt.sh > ~/.bash_git
+fi
+PS1='\u@\h \w\033[36m$(__git_ps1 " (%s)")\033[0m\$ '
